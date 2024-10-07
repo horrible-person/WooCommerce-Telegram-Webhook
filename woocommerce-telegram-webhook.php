@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
 add_action('woocommerce_new_order', 'send_telegram_message_on_new_order', 10, 1);
 
 function send_telegram_message_on_new_order($order_id) {
-    $bot_token = 'TELEGRAM_BOT_TOKEN; // Replace with your bot token
+    $bot_token = TELEGRAM_BOT_TOKEN; // Replace with your bot token
     $chat_id = TELEGRAM_CHAT_ID; // Replace with your chat ID
     $telegram_api_url = "https://api.telegram.org/bot{$bot_token}/sendMessage";
 
